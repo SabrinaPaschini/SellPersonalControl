@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-family: serif;
+  background-image: url(https://as2.ftcdn.net/v2/jpg/04/70/79/81/1000_F_470798193_n3ZqMNaRJ9m7PEb5FEnoPqLJRlPvQZ7G.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-transform: uppercase;
+
+  margin-bottom: 2rem;
+}
+
+p {
+  color: #f55f36;
+  margin-bottom: 2rem;
+}
+
+.content {
+  border: 1px #f086694d solid;
+  background-color: #ca735644;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inputs {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 5rem;
+}
+
+.inputs input {
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  background-color: #f0866986;
+  border: 1px #f0866963 solid;
+  cursor: pointer;
+}
+.inputs input:hover {
+  background-color: #f08669;
+  transition: 0.8s;
+}
+
+.inputs button:hover {
+  background-color: #f08669;
+  transition: 0.8s;
+}
+
+.inputs button {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 1rem;
+  padding: 0.2rem;
+  background-color: #f0866986;
+  border: 1px #f0866963 solid;
+  cursor: pointer;
+}
+
+.input1 {
+  width: 300px;
+  text-align: center;
+}
+
+.footer p {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+.all {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://as2.ftcdn.net/v2/jpg/04/70/79/81/1000_F_470798193_n3ZqMNaRJ9m7PEb5FEnoPqLJRlPvQZ7G.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.boleta {
+  border: solid 2px #f0866954;
+  border-radius: 1rem;
+  width: 500px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f086694d;
+  display: flex;
+  flex-direction: column;
+}
+
+.total,
+button {
+  margin: 1rem;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #f0866967;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dias {
+  flex-wrap: wrap;
+  border: solid 2px #f0866967;
+  width: 200px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f0866998;
+  text-align: center;
+}
+
+.mes {
+  display: flex;
+  flex-direction: row;
+}
