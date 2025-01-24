@@ -1,4 +1,5 @@
 .all {
+  
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -12,10 +13,11 @@
 }
 
 .boleta {
+  
   border: solid 2px #f0866954;
-  border-radius: 1rem;
-  width: 500px;
-  height: 300px;
+  border-radius: .5rem;
+  width: 600px;
+  height: 400px;
   align-items: center;
   justify-content: center;
   margin: 1.5rem;
@@ -29,6 +31,7 @@
 .total,
 button {
   margin: 1rem;
+  
 }
 
 .filtro {

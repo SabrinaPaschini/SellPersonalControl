@@ -5,6 +5,7 @@
 }
 
 .all {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,13 +21,17 @@
 }
 
 h1 {
+  color: black;
   text-transform: uppercase;
 
   margin-bottom: 2rem;
 }
 
 p {
-  color: #f55f36;
+  
+  color: #f34110;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
 }
 
