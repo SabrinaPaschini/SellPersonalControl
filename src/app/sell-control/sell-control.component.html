@@ -1,16 +1,18 @@
 <div class="all">
   <h1>Vendas Controle Diário</h1>
 
-  <p>Meta 87.000</p>
-  <p>23 Dias</p>
-  <p>Calculo por dias 5000</p>
+  <p>Meta {{ meta }}</p>
+  <p>{{ dias }} Dias</p>
+  <p>Calculo por dias {{ divisao.toFixed(2) }}</p>
 
   <div class="boleta">
-    <p>Boleta dia 01 :</p>
-
-    <p>Item: (Calcular Peça por atendimento)</p>
+    <p>
+      Boleta dia 01:<br>(colocar um for para ir passando os dias conforme o dia for
+      finalizado, o controle vai ser no botão 'fim do dia um')
+    </p>
+    <p>Item: <br>(Calcular Peça por atendimento, abrir um input a mais a cada item reacionado com a quantidade que foi digitada no campo)</p>
     <input type="number" />
-    <p>Valor: (Colocar um for para quando tiver mais de um item)</p>
+    <p>Valor: <br>(Colocar um for para quando tiver mais de um item)</p>
     <input type="number" />
 
     <button>Somar</button>
