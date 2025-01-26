@@ -20,6 +20,7 @@ export class SellControlComponent implements OnInit {
 
   async calcularDivisao() {
     this.divisao = await this.calculoPorDia(this.meta, this.dias);
+    
   }
 
   async calculoPorDia(meta: number, dias: number): Promise<number> {

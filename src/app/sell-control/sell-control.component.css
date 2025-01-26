@@ -1,5 +1,4 @@
 .all {
-  
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -13,9 +12,8 @@
 }
 
 .boleta {
-  
   border: solid 2px #f0866954;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 600px;
   height: 400px;
   align-items: center;
@@ -31,7 +29,6 @@
 .total,
 button {
   margin: 1rem;
-  
 }
 
 .filtro {
@@ -61,4 +58,27 @@ button {
 .mes {
   display: flex;
   flex-direction: row;
+}
+
+.inputItem {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  border: solid 1px gray;
+  width: 20rem;
+  background-color: rgba(160, 40, 40, 0.411);
+  margin: 1rem;
+}
+
+.inputItem:hover{
+  background-color: rgba(160, 40, 40, 0.852);
+  
+}
+
+.btnAdd{
+
+  
 }
