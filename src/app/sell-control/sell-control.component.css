@@ -14,8 +14,8 @@
 .boleta {
   border: solid 2px #f0866954;
   border-radius: 0.5rem;
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 800px;
   align-items: center;
   justify-content: center;
   margin: 1.5rem;
@@ -61,24 +61,57 @@ button {
 }
 
 .inputItem {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: black;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 5px;
   border: solid 1px gray;
-  width: 20rem;
+  width: 10rem;
   background-color: rgba(160, 40, 40, 0.411);
   margin: 1rem;
 }
 
-.inputItem:hover{
+.inputItem:hover {
   background-color: rgba(160, 40, 40, 0.852);
-  
 }
 
-.btnAdd{
+.btnAdd {
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px gray;
+  width: 10rem;
+  background-color: rgba(160, 40, 40, 0.411);
+  margin: 1rem;
+}
 
-  
+.inputAndBtn {
+  border-radius: 5rem;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.btnEnd {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  border: solid rgba(232, 108, 108, 0.589) 1px;
+  border-radius: 10rem;
+  background-color: rgba(177, 56, 56, 0.409);
+}
+
+.btnAdd:hover {
+  background-color: rgba(0, 128, 0, 0.384);
+}
+
+#btnAddEnd:hover {
+  background-color: rgba(255, 0, 0, 0.368);
 }

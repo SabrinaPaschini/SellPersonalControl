@@ -3,28 +3,42 @@
 
   <p>Meta R$ {{ meta }}</p>
   <p>{{ dias }} Dias</p>
-  <p>Calculo por dias R$ {{ divisao }}</p>
+  <p>Calculo por dia R$ {{ divisao.toFixed(2) }}</p>
 
   <div class="boleta">
+    <h1>Boleta dia {{ diaVigente }}</h1>
     <p>
-      Boleta dia 01 (aqui vai um binding dos dias calculada e atualizada):<br />(colocar um for para ir passando os dias conforme o
-      dia for finalizado, o controle vai ser no botão 'fim do dia um')
+      (aqui vai um binding dos dias calculada e atualizada):<br />(colocar um
+      for para ir passando os dias conforme o dia for finalizado, o controle vai
+      ser no botão 'fim do dia um')
     </p>
+    <h1>Item: <br /></h1>
     <p>
-      Item: <br />(Calcular Peça por atendimento, abrir um input a mais a cada
-      item reacionado com a quantidade que foi digitada no campo)
+      (Calcular Peça por atendimento, abrir um input a mais a cada item
+      reacionado com a quantidade que foi digitada no campo)
     </p>
-    <input
-      type="number"
-      class="inputItem"
-      placeholder="Insira a quantidade de Itens"
-    />
-    <button class="btnAdd">Adicionar</button>
-    <p>Valor: <br />(Colocar um for para quando tiver mais de um item)</p>
-    <input type="number" />
 
-    <button>Calcular total de venda</button>
-    <button class="total">Fim do dia um</button>
+    <div class="inputAndBtn">
+      <input
+        type="number"
+        class="inputItem"
+        placeholder="Quantidade de Itens"
+        [(ngModel)]="quantidadeItens"
+      />
+      <button class="btnAdd" (click)="adicionaItem()">Adicionar</button>
+    </div>
+
+    <h1>Valor:</h1>
+    <p><br />(Colocar um for para quando tiver mais de um item)</p>
+    <div class="inputAndBtn">
+      <input type="number" class="inputItem" placeholder="Valor unidade" />
+      <button class="btnAdd" onclick="">valor item por unidade</button>
+    </div>
+
+    <div class="btnEnd">
+      <button class="btnAdd">Fechar valor final</button>
+      <button class="btnAdd" id="btnAddEnd">Fechar dia {{ diaVigente }}</button>
+    </div>
   </div>
 </div>
 
