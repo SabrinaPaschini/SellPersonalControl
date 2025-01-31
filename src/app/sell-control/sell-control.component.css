@@ -2,7 +2,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-image: url(https://as2.ftcdn.net/v2/jpg/04/70/79/81/1000_F_470798193_n3ZqMNaRJ9m7PEb5FEnoPqLJRlPvQZ7G.jpg);
@@ -18,8 +18,8 @@
   height: 800px;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1.0rem;
+  margin-bottom: .5rem;
   padding: 0.5rem;
   background-color: #f086694d;
   display: flex;
@@ -111,7 +111,7 @@ button {
 }
 
 #btnAddEnd:hover {
-  background-color: rgba(255, 0, 0, 0.662);
+  background-color: rgba(225, 106, 56, 0.662);
 }
 
 #btnAddEnd {

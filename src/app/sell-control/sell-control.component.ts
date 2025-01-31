@@ -38,6 +38,8 @@ export class SellControlComponent implements OnInit {
   // calculo da venda com a quantidade de itens
 
   valorFinal() {
+
     return this.quantidadeItens * this.valorVenda;
+    
   }
 }
