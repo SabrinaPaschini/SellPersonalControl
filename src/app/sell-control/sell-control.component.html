@@ -6,17 +6,9 @@
   <p>Calculo por dia R$ {{ divisao.toFixed(2) }}</p>
 
   <div class="boleta">
-    <h1>Boleta dia {{ diaVigente }}</h1>
-    <p>
-      (aqui vai um binding dos dias calculada e atualizada):<br />(colocar um
-      for para ir passando os dias conforme o dia for finalizado, o controle vai
-      ser no botão 'fim do dia um')
-    </p>
+    <h1>Borderô dia {{ diaVigente }}</h1>
+
     <h1>Item: <br /></h1>
-    <p>
-      (Calcular Peça por atendimento, abrir um input a mais a cada item
-      reacionado com a quantidade que foi digitada no campo)
-    </p>
 
     <div class="inputAndBtn">
       <input
@@ -25,23 +17,32 @@
         placeholder="Quantidade de Itens"
         [(ngModel)]="quantidadeItens"
       />
-      <button class="btnAdd" (click)="adicionaItem()">Adicionar</button>
+
+      <button class="btnAdd">Quantidade itens</button>
     </div>
 
     <h1>Valor:</h1>
-    <p><br />(Colocar um for para quando tiver mais de um item)</p>
     <div class="inputAndBtn">
-      <input type="number" class="inputItem" placeholder="Valor unidade" />
-      <button class="btnAdd" onclick="">valor item por unidade</button>
+      <input
+        type="number"
+        class="inputItem"
+        placeholder="Valor unidade"
+        [(ngModel)]="valorVenda"
+      />
+      <button class="btnAdd">Valor unitário</button>
     </div>
+
+    <h1>
+      Valor final da venda é de {{ valorFinal() }} Reais com
+      {{ quantidadeItens }} Itens.
+    </h1>
 
     <div class="btnEnd">
       <button class="btnAdd">Fechar valor final</button>
-      <button class="btnAdd" id="btnAddEnd">Fechar dia {{ diaVigente }}</button>
     </div>
   </div>
 </div>
-
+<button class="btnAdd" id="btnAddEnd">Fechar dia {{ diaVigente }}</button>
 <div class="filtro">
   <p>Pesquisa por dia:</p>
   <input type="text" />

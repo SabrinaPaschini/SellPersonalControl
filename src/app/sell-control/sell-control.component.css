@@ -101,11 +101,9 @@ button {
 .btnEnd {
   padding: 1rem;
   margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  border: solid rgba(232, 108, 108, 0.589) 1px;
-  border-radius: 10rem;
-  background-color: rgba(177, 56, 56, 0.409);
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnAdd:hover {
@@ -113,5 +111,11 @@ button {
 }
 
 #btnAddEnd:hover {
-  background-color: rgba(255, 0, 0, 0.368);
+  background-color: rgba(255, 0, 0, 0.662);
+}
+
+#btnAddEnd {
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
 }

@@ -6,21 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sell-control.component.css'],
 })
 export class SellControlComponent implements OnInit {
-
   meta: number = 0;
   dias: number = 31;
   divisao: number = 0;
   diaVigente: number = 0;
-  quantidadeItens:number = 0 ; 
-
+  quantidadeItens: number = 0;
+  diaFim: number = 0;
+  valorVenda: number = 0;
+  valor: number = 0;
   constructor() {}
 
   ngOnInit(): void {
     this.meta = 50000;
-    this.dias = 31;
+    this.dias = 26;
     this.calcularDivisao();
     this.diaVigente = 1;
-    this.quantidadeItens = 0; 
+    this.diaFim = 31; // controle para o calculo do ultimo dia da meta.
+    this.valorFinal();
+    this.quantidadeItens = 0;
+    this.valorVenda = 0;
   }
 
   async calcularDivisao() {
@@ -31,7 +35,9 @@ export class SellControlComponent implements OnInit {
     return meta / dias;
   }
 
-  adicionaItem(){
-     this.quantidadeItens
-    
-  }}
+  // calculo da venda com a quantidade de itens
+
+  valorFinal() {
+    return this.quantidadeItens * this.valorVenda;
+  }
+}
