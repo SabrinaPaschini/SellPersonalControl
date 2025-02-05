@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SellControlComponent } from './sell-control/sell-control.component';
 import { AdminComponent } from './admin/admin.component';
+import { Usuario01Component } from './usuario01/usuario01.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SellControlComponent,
-    AdminComponent
+    AdminComponent,
+    Usuario01Component
   ],
   imports: [
     BrowserModule,
@@ -23,4 +25,5 @@ import { AdminComponent } from './admin/admin.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

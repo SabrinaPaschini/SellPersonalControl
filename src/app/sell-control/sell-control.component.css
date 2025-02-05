@@ -78,6 +78,7 @@ button {
 }
 
 .btnAdd {
+  width: 10rem;
   cursor: pointer;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: black;
@@ -86,9 +87,9 @@ button {
   text-align: center;
   border-radius: 5px;
   border: solid 1px gray;
-  width: 10rem;
   background-color: rgba(160, 40, 40, 0.411);
-  margin: 1rem;
+  
+  
 }
 
 .inputAndBtn {
@@ -111,11 +112,11 @@ button {
 }
 
 #btnAddEnd:hover {
-  background-color: rgba(225, 106, 56, 0.662);
+  background-color: rgba(238, 18, 18, 0.703);
 }
 
 #btnAddEnd {
-  width: 100%;
+  width: 10rem;
   align-items: center;
-  padding: 1rem;
+  padding: .2rem;
 }

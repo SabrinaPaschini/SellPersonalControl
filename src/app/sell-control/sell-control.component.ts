@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
+
 
 @Component({
   selector: 'app-sell-control',
@@ -14,7 +16,8 @@ export class SellControlComponent implements OnInit {
   diaFim: number = 0;
   valorVenda: number = 0;
   valor: number = 0;
-  constructor() {}
+
+  constructor(private configService:ConfigService) {}
 
   ngOnInit(): void {
     this.meta = 50000;
@@ -25,6 +28,7 @@ export class SellControlComponent implements OnInit {
     this.valorFinal();
     this.quantidadeItens = 0;
     this.valorVenda = 0;
+    this.mostraTeste();
   }
 
   async calcularDivisao() {
@@ -42,4 +46,15 @@ export class SellControlComponent implements OnInit {
     return this.quantidadeItens * this.valorVenda;
     
   }
+
+  mostraTeste(){};
+
+
+  
+
+
+   
+
+  
+  
 }
