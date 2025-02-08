@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 
-
 @Component({
   selector: 'app-sell-control',
   templateUrl: './sell-control.component.html',
@@ -16,8 +15,10 @@ export class SellControlComponent implements OnInit {
   diaFim: number = 0;
   valorVenda: number = 0;
   valor: number = 0;
+  // Variável para armazenar o valor de "teste" do serviço
+  testeService: string = '';
 
-  constructor(private configService:ConfigService) {}
+  constructor(private configService: ConfigService) {}
 
   ngOnInit(): void {
     this.meta = 50000;
@@ -28,7 +29,6 @@ export class SellControlComponent implements OnInit {
     this.valorFinal();
     this.quantidadeItens = 0;
     this.valorVenda = 0;
-    this.mostraTeste();
   }
 
   async calcularDivisao() {
@@ -42,19 +42,12 @@ export class SellControlComponent implements OnInit {
   // calculo da venda com a quantidade de itens
 
   valorFinal() {
-
     return this.quantidadeItens * this.valorVenda;
-    
   }
 
-  mostraTeste(){};
-
-
-  
-
-
-   
-
-  
-  
+  // criar um metodo para receber o metodo da service, e depois armazenar esse resultado na variavel
+  testeImport() {
+    this.configService.mostraTeste();
+    this.testeService = this.configService.teste; // Atribui o valor de "teste" no serviço à variável local
+  }
 }

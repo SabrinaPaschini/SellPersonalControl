@@ -3,13 +3,19 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class ConfigService{
+export class ConfigService {
   
-  teste: Array<string> = [''];
+  teste:string ='';
 
   constructor() {}
 
   mostraTeste() {
-    return (this.teste = ['sabrina','Sa']);
+    this.teste = 'outro valor para a variavel';
   }
+
+  diasTrabalhados(){
+
+  }
+
 }
+

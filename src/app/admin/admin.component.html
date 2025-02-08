@@ -1,10 +1,18 @@
 <div class="all">
-  <h1>Config Admin</h1>
+  <h1>Meta</h1>
+
+  <h2>Config Admin</h2>
+
   <p>Dias</p>
-  <input type="number" />
+
+  <input type="number" placeholder="Dias Trabalhados" [(ngModel)]="diasTemp" />
+
+  <button type="button" (click)="diasData()">Enviar</button><br />
+
+  <p>Teste de dias {{ dias }}</p>
 
   <p>Meta</p>
-  <input type="number" />
-
-  <p></p>
+  <input type="number" placeholder="Meta Mensal" />
+  <input type="submit" />
+  <p>Guardar em uma variavel dentro da service</p>
 </div>

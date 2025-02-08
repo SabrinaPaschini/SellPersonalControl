@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  dias: number = 0;
+  diasTemp: number = 0;
 
-  ngOnInit(): void {
+  diasData() {
+    return (this.dias = this.diasTemp);
   }
 
+  ngOnInit(): void {}
 }
