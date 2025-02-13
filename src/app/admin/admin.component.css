@@ -8,3 +8,7 @@
     margin: 1rem;
     padding: 1rem;
 }
+
+p,h2{
+    color: rgba(204, 116, 65, 0.904);
+}

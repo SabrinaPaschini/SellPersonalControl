@@ -1,23 +1,21 @@
 <div class="all">
-  <h1>Meta</h1>
-
   <h2>Config Admin</h2>
 
   <p>Dias</p>
-
-  <input type="number" placeholder="Dias Trabalhados" [(ngModel)]="diasInputTemp" />
+  <input
+    type="number"
+    placeholder="Dias Trabalhados"
+    [(ngModel)]="diasInputTemp"
+  />
 
   <button type="button" (click)="diasData()">Enviar</button><br />
-  <h1>{{diasMeta }} Dias</h1>
-
-
+  <h1>{{ diasMeta }} Dias</h1>
 
   <p>Meta</p>
   <input type="number" placeholder="Meta Mensal" [(ngModel)]="metaInputTemp" />
   <button type="button" (click)="metaData()">Enviar</button>
-  <h1>{{metaFinanceira}} Meta Financeira</h1>
+  <h1>{{ metaFinanceira }} Meta Financeira</h1>
 
-
-  <h2>Salvar dados na service? </h2>
+  <h2>Salvar dados na service?</h2>
   <button type="button">Enviar para service</button>
 </div>

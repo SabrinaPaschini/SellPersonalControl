@@ -8,15 +8,16 @@ import { ConfigService } from '../config.service';
 })
 export class SellControlComponent implements OnInit {
   meta: number = 0;
-  dias: number = 31;
+  dias: number = 0;
+
+
   divisao: number = 0;
   diaVigente: number = 0;
   quantidadeItens: number = 0;
   diaFim: number = 0;
   valorVenda: number = 0;
   valor: number = 0;
-  // Variável para armazenar o valor de "teste" do serviço
-  testeService: string = '';
+  
 
   constructor(private configService: ConfigService) {}
 
