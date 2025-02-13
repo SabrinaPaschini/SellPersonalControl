@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service'; // import da service
 
 @Component({
   selector: 'app-admin',
@@ -6,13 +7,36 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
-  constructor() {}
+  constructor(private configService: ConfigService) {} // lembrar de colocar no parametro
 
-  dias: number = 0;
-  diasTemp: number = 0;
+  diasMeta: number = 0;
+  diasInputTemp: number = 0;
+
+  metaFinanceira: number = 0; 
+  metaInputTemp: number = 0; 
 
   diasData() {
-    return (this.dias = this.diasTemp);
+    if (this.diasInputTemp >= 0) {
+      return (this.diasMeta = this.diasInputTemp);
+    } else {
+      return this.diasMeta = 0;
+    }
+  }
+
+  metaData(){
+    if(this.metaInputTemp >= 0){
+      return this.metaFinanceira = this.metaInputTemp;
+    }else {
+      return this.metaFinanceira = 0;
+    }
+  }
+
+  
+
+  salvarConfiguracao() {
+    // um metodo para salvar os valores dos inputs e mandar para a service
+
+    this.configService.dias = this.diasMeta;
   }
 
   ngOnInit(): void {}

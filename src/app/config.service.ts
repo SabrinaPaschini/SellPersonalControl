@@ -5,17 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
   
-  teste:string ='';
-
+  dias: number = 0;
+  meta: number = 0;
+ 
   constructor() {}
 
-  mostraTeste() {
-    this.teste = 'outro valor para a variavel';
-  }
-
-  diasTrabalhados(){
-
-  }
-
+  
 }
-

@@ -21,8 +21,8 @@ export class SellControlComponent implements OnInit {
   constructor(private configService: ConfigService) {}
 
   ngOnInit(): void {
-    this.meta = 50000;
-    this.dias = 26;
+    this.meta = 0;
+    this.dias = 0;
     this.calcularDivisao();
     this.diaVigente = 1;
     this.diaFim = 31; // controle para o calculo do ultimo dia da meta.
@@ -45,9 +45,5 @@ export class SellControlComponent implements OnInit {
     return this.quantidadeItens * this.valorVenda;
   }
 
-  // criar um metodo para receber o metodo da service, e depois armazenar esse resultado na variavel
-  testeImport() {
-    this.configService.mostraTeste();
-    this.testeService = this.configService.teste; // Atribui o valor de "teste" no serviço à variável local
-  }
+  
 }
