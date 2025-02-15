@@ -1,12 +1,14 @@
 <div class="all">
   <h1>Controle Diário</h1>
 
-  <p>Meta R$ {{ meta }}</p>
-  <p>{{ dias }} Dias</p>
-  <p>Calculo por dia R$ {{ divisao.toFixed(2) }}</p>
+  <p>Meta R$ {{  meta }}</p>
+  <p>{{ dias  }} Dias</p>
+  <p>Calculo por dia R$</p>
+  <h2>{{ meta }} definida la no Admin</h2>
 
   <div class="boleta">
-    <h1>Borderô dia {{ diaVigente }}</h1>
+    <h1>Borderô dia</h1>
+    <h2></h2>
 
     <h1>Item: <br /></h1>
 
@@ -15,7 +17,7 @@
         type="number"
         class="inputItem"
         placeholder="Quantidade de Itens"
-        [(ngModel)]="quantidadeItens"
+       
       />
 
       <button class="btnAdd">Quantidade itens</button>
@@ -27,14 +29,14 @@
         type="number"
         class="inputItem"
         placeholder="Valor unidade"
-        [(ngModel)]="valorVenda"
+       
       />
       <button class="btnAdd">Valor unitário</button>
     </div>
 
     <h1>
       Valor final da venda é de <br />
-      {{ valorFinal() }} Reais com {{ quantidadeItens }} Itens?
+       Reais com  Itens?
     </h1>
 
     <div class="btnEnd">
@@ -42,7 +44,7 @@
     </div>
   </div>
 </div>
-<button class="btnAdd" id="btnAddEnd">Fechar dia {{ diaVigente }}</button>
+<button class="btnAdd" id="btnAddEnd">Fechar dia </button>
 
 <div class="filtro">
   <p>Pesquisa por dia:</p>

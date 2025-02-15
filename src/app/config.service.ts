@@ -11,7 +11,7 @@ export class ConfigService {
   constructor() {}
 
   salvarConfiguracao(diasMeta:number, metaFinanceira:number):void {
-    // um metodo para salvar os valores dos inputs e mandar para a service
+    // um metodo para salvar os valores dos inputs e mandar outros componentes usarem 
 
     this.dias = diasMeta 
     this.meta = metaFinanceira

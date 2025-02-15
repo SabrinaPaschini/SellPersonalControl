@@ -120,3 +120,7 @@ button {
   align-items: center;
   padding: .2rem;
 }
+
+p,h2{
+  color: rgba(8, 8, 8, 0.904);
+}

@@ -9,12 +9,13 @@ import { ConfigService } from '../config.service'; // import da service
 export class AdminComponent implements OnInit {
   constructor(private configService: ConfigService) {} // lembrar de colocar no parametro
 
-  diasMeta: number = 0;
+  
   diasInputTemp: number = 0;
-
-  metaFinanceira: number = 0;
   metaInputTemp: number = 0;
-
+  
+  diasMeta: number = 0;
+  metaFinanceira: number = 0;
+  
   diasData() {
     if (this.diasInputTemp >= 0) {
       return (this.diasMeta = this.diasInputTemp);
@@ -31,13 +32,15 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  enviarConfigInicial() {
+  salvarConfiguracao() {
     // um metodo para salvar os valores dos inputs e mandar para a service
-
     this.configService.dias = this.diasMeta;
     this.configService.meta = this.metaFinanceira;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    
+  }
 }
 
