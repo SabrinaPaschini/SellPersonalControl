@@ -1,29 +1,12 @@
 import { Injectable } from '@angular/core';
 
+import { BehaviorSubject } from 'rxjs'; // passo 1, apos instalar o rxjs 
+
+// agora preciso, apos importar criar uma classe 
+
 @Injectable({
   providedIn: 'root',
 })
 export class ConfigService {
-  
-  dias: number = 0;
-  meta: number = 0;
- 
-  constructor() {}
 
-  salvarConfiguracao(diasMeta:number, metaFinanceira:number):void {
-    // um metodo para salvar os valores dos inputs e mandar outros componentes usarem 
-
-    this.dias = diasMeta 
-    this.meta = metaFinanceira
-  }
-
-   // Métodos para acessar os dados salvos
-   getDias(): number {
-    return this.dias;    // Retorna o valor armazenado de dias
-  }
-
-  getMeta(): number {
-    return this.meta;    // Retorna o valor armazenado de meta
-  }
-  
 }

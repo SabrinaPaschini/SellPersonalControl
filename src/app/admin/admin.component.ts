@@ -34,8 +34,7 @@ export class AdminComponent implements OnInit {
 
   salvarConfiguracao() {
     // um metodo para salvar os valores dos inputs e mandar para a service
-    this.configService.dias = this.diasMeta;
-    this.configService.meta = this.metaFinanceira;
+  
   }
 
   ngOnInit(): void {

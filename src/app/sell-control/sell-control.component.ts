@@ -15,7 +15,7 @@ export class SellControlComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.meta = this.configService.getMeta();
-    this.dias = this.configService.getDias();
+
+   
   }
 }
