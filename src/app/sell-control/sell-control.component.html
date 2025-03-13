@@ -25,10 +25,12 @@
       </button>
     </div>
 
-    <h1 *ngFor="">Valor:</h1>
-    <div class="inputAndBtn">
-      <input type="number" class="inputItem" placeholder="Valor unidade" />
-      <button class="btnAdd">Valor unitário</button>
+    <div class="valor dos itens" *ngFor="let _ of valorParaItens(item); let i = index"> 
+      <h1>Valor:</h1>
+      <div class="inputAndBtn">
+        <input type="number" class="inputItem" placeholder="Valor unidade" /> 
+        <button class="btnAdd">Valor unitário</button>
+      </div>
     </div>
 
     <h1>

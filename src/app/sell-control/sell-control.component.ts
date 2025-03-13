@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-sell-control',
@@ -17,6 +18,10 @@ export class SellControlComponent implements OnInit {
 
   guardaItem() {
     this.item = this.itemTemp;
+  }
+
+  valorParaItens(count: number ):any[]{ // criando um array na mesma quantidade de itens do input 
+    return new Array (count)
   }
 
   ngOnInit(): void {}
