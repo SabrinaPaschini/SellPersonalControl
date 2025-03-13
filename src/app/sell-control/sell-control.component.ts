@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 import { count } from 'rxjs';
 
@@ -14,15 +14,21 @@ export class SellControlComponent implements OnInit {
   itemTemp: number = 0;
   item: number = 0;
 
+  TodosPrecosTemp = [0];
+  todosPrecos = [0];
+
   constructor(private configService: ConfigService) {}
 
   guardaItem() {
     this.item = this.itemTemp;
   }
 
-  valorParaItens(count: number ):any[]{ // criando um array na mesma quantidade de itens do input 
-    return new Array (count)
+  valorParaItens(count: number): any[] {
+    // criando um array na mesma quantidade de itens do input, mesmo que seja und... eu só quero a quantidade de iterações e nao os valores 
+    return new Array(count);
   }
+
+  adicionaListaPreco() {}
 
   ngOnInit(): void {}
 }
