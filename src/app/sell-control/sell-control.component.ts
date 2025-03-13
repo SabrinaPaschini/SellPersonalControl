@@ -7,15 +7,17 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./sell-control.component.css'],
 })
 export class SellControlComponent implements OnInit {
-  
-  meta: number = 0 ;
-  dias: number = 0 ; 
+  meta: number = 0;
+  dias: number = 0;
+
+  itemTemp: number = 0;
+  item: number = 0;
 
   constructor(private configService: ConfigService) {}
 
-
-  ngOnInit(): void {
-
-   
+  guardaItem() {
+    this.item = this.itemTemp;
   }
+
+  ngOnInit(): void {}
 }

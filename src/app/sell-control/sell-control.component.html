@@ -1,8 +1,8 @@
 <div class="all">
   <h1>Controle Diário</h1>
 
-  <p>Meta R$ {{  meta }}</p>
-  <p>{{ dias  }} Dias</p>
+  <p>Meta R$ {{ meta }}</p>
+  <p>{{ dias }} Dias</p>
   <p>Calculo por dia R$</p>
   <h2>{{ meta }} definida la no Admin</h2>
 
@@ -17,26 +17,23 @@
         type="number"
         class="inputItem"
         placeholder="Quantidade de Itens"
-       
+        [(ngModel)]="itemTemp"
       />
 
-      <button class="btnAdd">Quantidade itens</button>
+      <button class="btnAdd" (click)="guardaItem()">
+        Adicione a quantidade itens
+      </button>
     </div>
 
-    <h1>Valor:</h1>
+    <h1 *ngFor="">Valor:</h1>
     <div class="inputAndBtn">
-      <input
-        type="number"
-        class="inputItem"
-        placeholder="Valor unidade"
-       
-      />
+      <input type="number" class="inputItem" placeholder="Valor unidade" />
       <button class="btnAdd">Valor unitário</button>
     </div>
 
     <h1>
       Valor final da venda é de <br />
-       Reais com  Itens?
+      Reais com Itens?
     </h1>
 
     <div class="btnEnd">
@@ -44,14 +41,13 @@
     </div>
   </div>
 </div>
-<button class="btnAdd" id="btnAddEnd">Fechar dia </button>
+<button class="btnAdd" id="btnAddEnd">Fechar dia</button>
 
 <div class="filtro">
   <p>Pesquisa por dia:</p>
   <input type="text" />
   <button>Filtrar</button>
 </div>
-
 
 <div class="mes">
   <div class="dias">
