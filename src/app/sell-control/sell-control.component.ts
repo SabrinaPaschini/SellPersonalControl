@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
+
 import { count } from 'rxjs';
 import { NgModel } from '@angular/forms';
 import { NumberSymbol } from '@angular/common';
@@ -17,11 +18,15 @@ export class SellControlComponent implements OnInit {
   item: number = 0;
 
   TodosPrecosTemp: number[] = [0];
-  todosPrecos: number [] = [0]
+  todosPrecos: number[] = [0];
 
   total: number = 0;
-  
-  
+  media: number = 0;
+
+  atendimentos: number = 0; 
+
+  bordero: any = {};
+
   constructor(private configService: ConfigService) {}
 
   guardaItem() {
@@ -34,16 +39,43 @@ export class SellControlComponent implements OnInit {
   }
 
   adicionarPreco() {
-   this.todosPrecos = this.TodosPrecosTemp
+    this.todosPrecos = this.TodosPrecosTemp;
   }
 
   detalheVenda() {
+    this.total = this.todosPrecos.reduce((acc, preco) => acc + preco, 0);
 
-     this.total = this.todosPrecos.reduce((acc, preco) => acc + preco, 0);
-
-     return this.total 
-    
+    return parseFloat(this.total.toFixed(4));
   }
+
+  calculoMedia() {
+    if (this.item === 0) {
+      return (this.item = 0);
+    } else {
+      this.media = this.total / this.item;
+    }
+    if (this.media === 0) {
+      this.media = 0;
+    }
+
+    return parseFloat(this.media.toFixed(2));
+  }
+
+  fechaValorFinal(){
+
+      const bordero = {
+
+        total : this.total ,
+        media : this.media,
+        item : this.item,
+        todosPrecos: this.todosPrecos
+
+
+    }; 
+    return bordero; 
+  }
+
+ 
 
   ngOnInit(): void {}
 }
