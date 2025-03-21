@@ -26,26 +26,25 @@
     </div>
 
     <div class="valor dos itens">
-      <h1>Valor: {{ TodosPrecosTemp }}</h1>
+      <h1>Valor:</h1>
+
       <div class="inputAndBtn">
         <input
+          *ngFor="let _ of valorParaItens(item); let i = index"
           type="number"
           class="inputItem"
           placeholder="Valor unidade"
           [(ngModel)]="TodosPrecosTemp[i]"
-          *ngFor="let _ of valorParaItens(item); let i = index"
         />
-        <button class="btnAdd" (click)="adicionaListaPreco()">
+
+        <button class="btnAdd" (click)="adicionarPreco()">
           Valor unitário
         </button>
       </div>
+      <p>valor de todos os precos {{ todosPrecos }}</p>
+      <h1>TOTAL VENDA: {{total}} PA: {{item}}</h1>
+      <p></p>
     </div>
-    <h1>array de precos digitados : {{ todosPrecos }}</h1>
-
-    <p>
-      Valor final da venda é de <br />
-      Reais com Itens?
-    </p>
 
     <div class="btnEnd">
       <button class="btnAdd">Fechar valor final</button>

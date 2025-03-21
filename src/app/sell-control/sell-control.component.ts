@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 import { count } from 'rxjs';
+import { NgModel } from '@angular/forms';
+import { NumberSymbol } from '@angular/common';
 
 @Component({
   selector: 'app-sell-control',
@@ -14,9 +16,12 @@ export class SellControlComponent implements OnInit {
   itemTemp: number = 0;
   item: number = 0;
 
-  TodosPrecosTemp = [0];
-  todosPrecos = [0];
+  TodosPrecosTemp: number[] = [0];
+  todosPrecos: number [] = [0]
 
+  total: number = 0;
+  
+  
   constructor(private configService: ConfigService) {}
 
   guardaItem() {
@@ -24,11 +29,21 @@ export class SellControlComponent implements OnInit {
   }
 
   valorParaItens(count: number): any[] {
-    // criando um array na mesma quantidade de itens do input, mesmo que seja und... eu só quero a quantidade de iterações e nao os valores 
+    // criando um array na mesma quantidade de itens do input, mesmo que seja und... eu só quero a quantidade de iterações e nao os valores
     return new Array(count);
   }
 
-  adicionaListaPreco() {}
+  adicionarPreco() {
+   this.todosPrecos = this.TodosPrecosTemp
+  }
+
+  detalheVenda() {
+
+     this.total = this.todosPrecos.reduce((acc, preco) => acc + preco, 0);
+
+     return this.total 
+    
+  }
 
   ngOnInit(): void {}
 }
