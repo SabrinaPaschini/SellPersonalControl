@@ -9,13 +9,13 @@
   />
 
   <button type="button" (click)="diasData()">Enviar</button><br />
-  <h1>{{ diasMeta }} Dias</h1>
 
   <p>Meta</p>
   <input type="number" placeholder="Meta Mensal" [(ngModel)]="metaInputTemp" />
   <button type="button" (click)="metaData()">Enviar</button>
-  <h1>{{ metaFinanceira }} Meta Financeira</h1>
 
   <h2>Salvar dados na service?</h2>
-  <button type="button" (click)=" salvarConfiguracao()">Enviar para service</button>
+  <button type="button" (click)="salvarConfiguracao()">
+    Enviar para service
+  </button>
 </div>

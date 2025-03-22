@@ -1,27 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+
 .all {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(https://as2.ftcdn.net/v2/jpg/04/70/79/81/1000_F_470798193_n3ZqMNaRJ9m7PEb5FEnoPqLJRlPvQZ7G.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .boleta {
-  border: solid 2px #f0866954;
-  border-radius: 0.5rem;
-  width: 900px;
-  height: 800px;
+  border: solid 2px #f0866936;
+  width: auto;
+  height: auto;
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 2rem;
-  background-color: #f086694d;
+  background-color: #ffa7877e;
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +40,7 @@ button {
 .filtro {
   display: flex;
   flex-direction: row;
-  border: solid 1px #f0866967;
+  border: solid 1px #00000067;
   margin: 1rem;
   justify-content: center;
   align-items: center;
@@ -66,30 +72,27 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 5px;
-  border: solid 1px gray;
   width: 10rem;
-  background-color: rgba(160, 40, 40, 0.411);
+  border: solid 1px #f086691c;
+  background-color: #f0866970;
   margin: 1rem;
 }
 
 .inputItem:hover {
-  background-color: rgba(160, 40, 40, 0.852);
+  background-color: rgba(160, 40, 40, 0.63);
 }
 
 .btnAdd {
-  width: 10rem;
+  width: 15rem;
   cursor: pointer;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: black;
+  padding: 1rem;
+
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 5px;
-  border: solid 1px gray;
-  background-color: rgba(160, 40, 40, 0.411);
-  
-  
+  text-transform: uppercase;
+  border: solid 1px #f086691c;
+  background-color: #f0866970;
 }
 
 .inputAndBtn {
@@ -99,16 +102,24 @@ button {
   margin: 1rem;
 }
 
-.btnEnd {
+.btnAddEnd {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: medium;
+
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
   padding: 1rem;
   margin: 1rem;
-  border-radius: 1rem;
   justify-content: center;
   align-items: center;
 }
 
 .btnAdd:hover {
-  background-color: rgba(0, 128, 0, 0.384);
+  background-color: rgba(0, 128, 0, 0.267);
 }
 
 #btnAddEnd:hover {
@@ -116,11 +127,35 @@ button {
 }
 
 #btnAddEnd {
-  width: 10rem;
+  width: 8rem;
   align-items: center;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
-p,h2{
+p,
+h2 {
   color: rgba(8, 8, 8, 0.904);
+}
+
+.config {
+  font-size: 1.25rem;
+  border: solid 1px black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.parteFinalColeta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.parteFinalColeta input {
+  text-align: center;
+  margin-left: 1rem;
 }

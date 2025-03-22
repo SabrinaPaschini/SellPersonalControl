@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { ConfigService } from '../config.service'; // import da service
 
 @Component({
@@ -35,7 +36,8 @@ export class AdminComponent implements OnInit {
   }
 
   salvarConfiguracao() {
-    
+
+    return this.metaFinanceira = this.configService.metaindividual
   
   }
 

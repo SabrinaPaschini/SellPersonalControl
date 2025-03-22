@@ -11,5 +11,14 @@ import { BehaviorSubject } from 'rxjs'; // passo 1, apos instalar o rxjs
 
 export class ConfigService {
 
+  metaindividual: number = 0; 
+
+dadosService(){
+ 
+
 }
+
+}
+
+
 
