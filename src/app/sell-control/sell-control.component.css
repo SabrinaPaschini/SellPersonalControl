@@ -96,10 +96,16 @@ button {
 }
 
 .inputAndBtn {
-  border-radius: 5rem;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem;
   margin: 1rem;
+  width: 500x;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btnAddEnd {
@@ -108,7 +114,6 @@ button {
   font-weight: bold;
   font-style: normal;
   font-size: medium;
-
   color: white;
   background-color: black;
   text-transform: uppercase;
@@ -116,6 +121,7 @@ button {
   margin: 1rem;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .btnAdd:hover {
@@ -153,9 +159,21 @@ h2 {
   padding: 1rem;
   justify-content: center;
   text-align: center;
+  border: solid 1px rgba(0, 0, 0, 0.377);
 }
 
 .parteFinalColeta input {
   text-align: center;
   margin-left: 1rem;
+  padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.178);
+  border: none;
+}
+
+.filtro input {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.178);
+  padding: 1rem;
 }

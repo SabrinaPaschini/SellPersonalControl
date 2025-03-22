@@ -1,16 +1,17 @@
 <div class="all">
-  <h1>Controle Diário</h1>
+  <h1>Controle Diário Pessoal</h1>
 
   <section class="config">
     <p>Meta R$ {{ meta }}</p>
-    <p>{{ dias }} Dias</p>
-    <p>Calculo por dia R$</p>
-    <h2>{{ meta }} definida la no Admin</h2>
+    <p>Dias {{ dias }} </p>
+    <p>Calculo por dia para 100% R$ </p>
+    <p>Calculo por dia para 130% R$ </p>
+    <h2>Definida la no componente Admin {{ meta }}</h2>
   </section>
 
   <div class="boleta">
     <h1>BORDERÔ</h1>
-    
+
     <h2>Item:</h2>
 
     <div class="inputAndBtn">
@@ -63,12 +64,14 @@
 
 <div class="filtro">
   <p>Pesquisa por dia:</p>
-  <input type="text" />
-  <button>Filtrar</button>
+  <input type="text" placeholder="Digite o dia desejado" />
+  <button class="btnAddEnd">Filtrar</button>
 </div>
 
 <div class="mes">
+  <h1>friedman calculado, criar outra rota para ver os dias como se fossem planillhas</h1>
   <div class="dias">
+
     <p>Dia 01/08</p>
     <p>Soma do valor da venda</p>
     <p>Peças da boleta</p>
