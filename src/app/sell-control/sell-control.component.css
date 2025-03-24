@@ -48,22 +48,26 @@ button {
 }
 
 .dias {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  border: solid 2px #f0866967;
+  border: solid 2px #f0866946;
   width: 200px;
-  height: 300px;
+
+  min-height: 400px;
   align-items: center;
   justify-content: center;
   margin: 1.5rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  background-color: #f0866998;
+  background-color: #f0866950;
   text-align: center;
 }
 
 .mes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .inputItem {
@@ -86,7 +90,6 @@ button {
   width: 15rem;
   cursor: pointer;
   padding: 1rem;
-
   justify-content: center;
   align-items: center;
   text-align: center;

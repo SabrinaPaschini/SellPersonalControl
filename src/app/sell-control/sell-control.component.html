@@ -44,9 +44,9 @@
         </button>
       </div>
       <h1>Total venda: {{ detalheVenda() }}</h1>
-      <h1>PA: {{ item }}</h1>
-      <h1>Média valor da venda: {{ calculoMedia() }}</h1>
-    </div>
+      <h1>Peça por atendimento: {{ item }}</h1>
+      
+      </div>
 
     <div class="btnEnd">
       <button class="btnAdd">Fechar valor final</button>
@@ -69,10 +69,29 @@
 </div>
 
 <div class="mes">
-  <h1>friedman calculado, criar outra rota para ver os dias como se fossem planillhas</h1>
+  
   <div class="dias">
+    
+      <p class="separar">Dia 01/08</p> 
+      <button (click)="mostraDiv()" class="btnAdd">Mais informações</button>
 
-    <p>Dia 01/08</p>
+      <p>Total da venda {{detalheVenda()}}</p>
+     
+      
+      <div class="maisInfo" *ngIf="mais">
+        <p>Peças da boleta {{item}}</p>
+        <p>total de peças no dia - quando clicar no botao fechar valor final</p>
+        <p>Total de boletas no dia - toda vez que clicar em valor final ele cria um contador </p>
+        <p>Total de atendimentos para calulo da conversão</p>
+        
+      </div>
+   
+    
+    
+  </div>
+
+  <div class="dias">
+    <p>Dia 24/03</p>
     <p>Soma do valor da venda</p>
     <p>Peças da boleta</p>
     <p>total de peças no dia</p>
@@ -81,7 +100,7 @@
   </div>
 
   <div class="dias">
-    <p>Dia 02/08</p>
+    <p>Dia 25/03</p>
     <p>Soma do valor da venda</p>
     <p>Peças da boleta</p>
     <p>total de peças no dia</p>
@@ -90,16 +109,7 @@
   </div>
 
   <div class="dias">
-    <p>Dia 03/08</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 04/08</p>
+    <p>Dia 26/03</p>
     <p>Soma do valor da venda</p>
     <p>Peças da boleta</p>
     <p>total de peças no dia</p>
@@ -133,4 +143,4 @@
     <p>Total de boletas no dia</p>
     <p>Total de atendimentos para calulo da conversão</p>
   </div>
-</div>
+

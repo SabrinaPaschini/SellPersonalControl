@@ -1,0 +1,13 @@
+.header{
+    border: solid 1px red;
+    width: 100%;
+    height:auto;
+    justify-content: center;
+    background-color: red;
+
+}
+
+.content{
+    border: solid 1px blue;
+    background-color: blue;
+}

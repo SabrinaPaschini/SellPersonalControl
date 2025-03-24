@@ -27,6 +27,8 @@ export class SellControlComponent implements OnInit {
 
   bordero: any = {};
 
+  mais: boolean = false ; 
+
   constructor(private configService: ConfigService) {}
 
   guardaItem() {
@@ -61,20 +63,24 @@ export class SellControlComponent implements OnInit {
     return parseFloat(this.media.toFixed(2));
   }
 
+  //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente 
+
   fechaValorFinal(){
 
-      const bordero = {
-
-        total : this.total ,
-        media : this.media,
-        item : this.item,
-        todosPrecos: this.todosPrecos
-
-
-    }; 
-    return bordero; 
+      
+    
   }
 
+  mostraDiv(){
+
+    if(this.mais === false){
+      this.mais = true;  
+      
+    }else {
+      this.mais = false 
+    }
+
+  }
  
 
   ngOnInit(): void {}
