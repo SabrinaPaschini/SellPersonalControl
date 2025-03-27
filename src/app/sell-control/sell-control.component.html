@@ -1,12 +1,15 @@
-<div class="all">
+<div>
   <h1>Controle Diário Pessoal</h1>
 
-  <section class="config">
+  <button class="btnAddEnd" (click)="mostrarAcompanhamento()">
+    Acompanhamento mensal
+  </button>
+
+  <section class="config" class="all" *ngIf="acompanhamento">
     <p>Meta R$ {{ meta }}</p>
-    <p>Dias {{ dias }} </p>
-    <p>Calculo por dia para 100% R$ </p>
-    <p>Calculo por dia para 130% R$ </p>
-    <h2>Definida la no componente Admin {{ meta }}</h2>
+    <p>Dias {{ dias }}</p>
+    <p>Calculo por dia para 100% R$</p>
+    <p>Calculo por dia para 130% R$</p>
   </section>
 
   <div class="boleta">
@@ -39,26 +42,18 @@
           [(ngModel)]="TodosPrecosTemp[i]"
         />
 
-        <button class="btnAdd" (click)="adicionarPreco()">
-          Valor unitário
-        </button>
+        <button class="btnAdd" (click)="adicionarPreco()" >Valor final</button>
       </div>
-      <h1>Total venda: {{ detalheVenda() }}</h1>
+      <h1 >Total venda: {{ detalheVenda() }}</h1>
       <h1>Peça por atendimento: {{ item }}</h1>
-      
-      </div>
-
-    <div class="btnEnd">
-      <button class="btnAdd">Fechar valor final</button>
     </div>
-    <h1>Borderô {{ fechaValorFinal() }}</h1>
   </div>
 </div>
 
 <section class="parteFinalColeta">
   <p>Atendimentos por dia:</p>
 
-  <input type="number" placeholder="quantas abordagens" />
+  <input type="number" placeholder="Quantas abordagens" />
   <button class="btnAddEnd" id="">Finalizar dia</button>
 </section>
 
@@ -69,25 +64,30 @@
 </div>
 
 <div class="mes">
-  
   <div class="dias">
-    
-      <p class="separar">Dia 01/08</p> 
-      <button (click)="mostraDiv()" class="btnAdd">Mais informações</button>
+    <p class="separar">Dia 01/08</p>
+    <button (click)="mostraDiv()" class="btnAdd">Mais informações</button>
 
-      <p>Total da venda {{detalheVenda()}}</p>
+    <p>Total da venda {{ total }}</p>
+    <h1>Valores armazenados do dia:</h1>
+
+
+    <div class="maisInfo" *ngIf="mais">
      
-      
-      <div class="maisInfo" *ngIf="mais">
-        <p>Peças da boleta {{item}}</p>
-        <p>total de peças no dia - quando clicar no botao fechar valor final</p>
-        <p>Total de boletas no dia - toda vez que clicar em valor final ele cria um contador </p>
-        <p>Total de atendimentos para calulo da conversão</p>
-        
-      </div>
-   
-    
-    
+      <p>Peças da boleta {{ item }}</p>
+      <p>Total financeiro dia {{ total }}</p>
+      <p>vendas dia</p>
+      <li>
+        <ul>
+          {{listaDiaria}}
+        </ul>
+      </li>
+      <p>
+        Total de boletas no dia - toda vez que clicar em valor final ele cria um
+        contador
+      </p>
+      <p>Total de atendimentos para calulo da conversão</p>
+    </div>
   </div>
 
   <div class="dias">
@@ -143,4 +143,4 @@
     <p>Total de boletas no dia</p>
     <p>Total de atendimentos para calulo da conversão</p>
   </div>
-
+</div>

@@ -20,16 +20,25 @@ export class SellControlComponent implements OnInit {
   TodosPrecosTemp: number[] = [0];
   todosPrecos: number[] = [0];
 
+  acompanhamento: boolean = false;
+  mais: boolean = true;
+
   total: number = 0;
   media: number = 0;
 
-  atendimentos: number = 0; 
+  atendimentos: number = 0;
 
-  bordero: any = {};
-
-  mais: boolean = false ; 
+  listaDiaria: number[] = [];
 
   constructor(private configService: ConfigService) {}
+
+  mostrarAcompanhamento() {
+    if (this.acompanhamento === true) {
+      this.acompanhamento = false;
+    } else {
+      this.acompanhamento = true;
+    }
+  }
 
   guardaItem() {
     this.item = this.itemTemp;
@@ -50,6 +59,15 @@ export class SellControlComponent implements OnInit {
     return parseFloat(this.total.toFixed(4));
   }
 
+  //preciso de um metodo e variavel que guarde todas as vendas do dia e some elas, em um array
+  vendasDia() {
+    if (this.total > 0) {
+      this.listaDiaria.push(this.total);
+    }
+
+    console.log('Lista diária atualizada:', this.listaDiaria);
+  }
+
   calculoMedia() {
     if (this.item === 0) {
       return (this.item = 0);
@@ -63,25 +81,15 @@ export class SellControlComponent implements OnInit {
     return parseFloat(this.media.toFixed(2));
   }
 
-  //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente 
+  //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente
 
-  fechaValorFinal(){
-
-      
-    
-  }
-
-  mostraDiv(){
-
-    if(this.mais === false){
-      this.mais = true;  
-      
-    }else {
-      this.mais = false 
+  mostraDiv() {
+    if (this.mais === false) {
+      this.mais = true;
+    } else {
+      this.mais = false;
     }
-
   }
- 
 
   ngOnInit(): void {}
 }
