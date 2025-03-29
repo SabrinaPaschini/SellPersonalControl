@@ -3,3 +3,14 @@
     <button class="btn" (click)="chamarEvento()">Mostrar content</button> </header>
 
 <div class="content" *ngIf="evento" ><p>Conteudo escondido aqui</p></div>    
+
+
+<input type="number" [(ngModel)]="testedelista">
+<button (click)="adicionaLista()">Enviar vendas</button>
+
+<section>
+    <h1>Teste de lista de vendas</h1>
+    <ul>
+        <li *ngFor="let preco of addPreco">{{ preco }}</li>
+    </ul>
+</section>

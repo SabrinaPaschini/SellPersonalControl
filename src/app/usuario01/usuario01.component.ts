@@ -11,7 +11,7 @@ export class Usuario01Component implements OnInit {
   evento: boolean = false;   
 
   chamarEvento(){
-    
+
     if (this.evento === false){
       this.evento = true;
     }else {
@@ -20,6 +20,14 @@ export class Usuario01Component implements OnInit {
   }
 
   constructor() { }
+
+  testedelista: number = 0 ; 
+  addPreco: number[] = [];
+
+  adicionaLista(){
+    this.addPreco.push(this.testedelista)
+    this.testedelista = 0 ; 
+  }
 
   ngOnInit(): void {
     

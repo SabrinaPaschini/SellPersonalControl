@@ -53,7 +53,7 @@
 <section class="parteFinalColeta">
   <p>Atendimentos por dia:</p>
 
-  <input type="number" placeholder="Quantas abordagens" />
+  <input type="number" placeholder="Oportunidades" />
   <button class="btnAddEnd" id="">Finalizar dia</button>
 </section>
 
@@ -68,79 +68,22 @@
     <p class="separar">Dia 01/08</p>
     <button (click)="mostraDiv()" class="btnAdd">Mais informações</button>
 
-    <p>Total da venda {{ total }}</p>
-    <h1>Valores armazenados do dia:</h1>
+    <p>Soma dia: {{ total }}</p>
+    
+
 
 
     <div class="maisInfo" *ngIf="mais">
      
-      <p>Peças da boleta {{ item }}</p>
-      <p>Total financeiro dia {{ total }}</p>
-      <p>vendas dia</p>
-      <li>
+      <p>Quantidade de peças :{{item}}</p>
+      
+      <li *ngFor="let precos of ">
         <ul>
-          {{listaDiaria}}
+           um array de cada venda:{{todosPrecos}}
         </ul>
       </li>
-      <p>
-        Total de boletas no dia - toda vez que clicar em valor final ele cria um
-        contador
-      </p>
-      <p>Total de atendimentos para calulo da conversão</p>
+      
     </div>
   </div>
 
-  <div class="dias">
-    <p>Dia 24/03</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 25/03</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 26/03</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 05/08</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 05/08</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-
-  <div class="dias">
-    <p>Dia 05/08</p>
-    <p>Soma do valor da venda</p>
-    <p>Peças da boleta</p>
-    <p>total de peças no dia</p>
-    <p>Total de boletas no dia</p>
-    <p>Total de atendimentos para calulo da conversão</p>
-  </div>
-</div>
+ 
