@@ -171,6 +171,7 @@ h2 {
   padding: 1rem;
   background-color: rgba(128, 128, 128, 0.178);
   border: none;
+  margin-right: 1rem;
 }
 
 .filtro input {
@@ -180,3 +181,17 @@ h2 {
   background-color: rgba(128, 128, 128, 0.178);
   padding: 1rem;
 }
+
+.maisInfo, ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+ }
+

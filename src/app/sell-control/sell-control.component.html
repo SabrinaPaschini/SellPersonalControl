@@ -1,3 +1,4 @@
+
 <div>
   <h1>Controle Diário Pessoal</h1>
 
@@ -25,9 +26,7 @@
         [(ngModel)]="itemTemp"
       />
 
-      <button class="btnAdd" (click)="guardaItem()">
-        Adicione a quantidade itens
-      </button>
+      <button class="btnAdd" (click)="guardaItem()">Quantidade de itens</button>
     </div>
 
     <div class="valor dos itens">
@@ -42,19 +41,19 @@
           [(ngModel)]="TodosPrecosTemp[i]"
         />
 
-        <button class="btnAdd" (click)="adicionarPreco()" >Valor final</button>
+        <button class="btnAdd" (click)="adicionarPreco()"> Valor final</button>
       </div>
-      <h1 >Total venda: {{ detalheVenda() }}</h1>
-      <h1>Peça por atendimento: {{ item }}</h1>
+      <h1>Confirma total venda? R${{ detalheVenda() }}</h1>
     </div>
   </div>
 </div>
 
 <section class="parteFinalColeta">
   <p>Atendimentos por dia:</p>
-
-  <input type="number" placeholder="Oportunidades" />
-  <button class="btnAddEnd" id="">Finalizar dia</button>
+  <input type="number" placeholder="Oportunidades" [(ngModel)]="oportunidades"/>
+  <p>Horas trabalhadas:</p>
+  <input type="number" placeholder="Horas trabalhadas"  [(ngModel)]="horasTrabalho" />
+  <button class="btnAddEnd" id="" >Finalizar dia</button>
 </section>
 
 <div class="filtro">
@@ -69,21 +68,18 @@
     <button (click)="mostraDiv()" class="btnAdd">Mais informações</button>
 
     <p>Soma dia: {{ total }}</p>
-    
-
-
 
     <div class="maisInfo" *ngIf="mais">
-     
-      <p>Quantidade de peças :{{item}}</p>
-      
-      <li *ngFor="let precos of ">
-        <ul>
-           um array de cada venda:{{todosPrecos}}
-        </ul>
-      </li>
-      
+      <p>Horas de trabalho: {{horasTrabalho}}</p>
+      <p>Total de vendas: {{ total }}</p>
+      <p>Número de transações: {{transacoes}}</p>
+      <p>Número de itens: {{ item }}</p>
+      <p>Oportunidades {{oportunidades}}</p>
+
+      <p>Venda media:</p>
+      <p>Itens por venda:</p>
+      <p>Vendas por hora:</p>
+      <p>Taxa de conversão:</p>
     </div>
   </div>
-
- 
+</div>

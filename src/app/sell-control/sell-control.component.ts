@@ -18,16 +18,28 @@ export class SellControlComponent implements OnInit {
   TodosPrecosTemp: number[] = [0];
   todosPrecos: number[] = [0];
   acompanhamento: boolean = false;
-  mais: boolean = false;
+  mais: boolean = true;
 
   total: number = 0;
   media: number = 0;
 
   atendimentos: number = 0;
+  horasTrabalho: number = 0;
+  oportunidades: number = 0;
+
+  transacoes: number = 0;
 
   listaDiaria: number[] = []; // aqui vai uma lista de todos os valores vendidos no dia, mas quero que essa lista seja separada por cada bordero tb.
 
   constructor(private configService: ConfigService) {}
+
+  vendasDia() {
+    return (this.listaDiaria = this.todosPrecos);
+  }
+
+  somavendadiaria() {
+    this.listaDiaria;
+  }
 
   mostrarAcompanhamento() {
     if (this.acompanhamento === true) {
@@ -50,6 +62,7 @@ export class SellControlComponent implements OnInit {
   adicionarPreco() {
     this.todosPrecos = this.TodosPrecosTemp;
     this.TodosPrecosTemp = [0];
+    this.transacoes++;
   }
 
   detalheVenda() {
@@ -70,36 +83,9 @@ export class SellControlComponent implements OnInit {
     return parseFloat(this.media.toFixed(2));
   }
 
-  //preciso de um metodo e variavel que guarde todas as vendas do dia e some elas, estou falando de um objeto, e a cada iteracao criar um novo obj com todos os itens da venda
-  //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente
-
-
-        //friedman 
-  // horas de trabalho 2 
-  // total de vendas 3 
-  // numero de transacao  4 
-  // numero de itens 5
-  // oportunidades 6
-  
-  // agora os calculos diario: 
-
-// venda media ( 3 /4 )
-//itens por venda ( 5 /4 )
-//vendas por hora (3 / 2 )
-//taxa de conversao ( 4/6 * 100 )
-
-// calculo semanal
-
-
-
-  vendasDia() {
-   
+  HorasTrabalho() {
+    return (this.horasTrabalho = this.horasTrabalho);
   }
-
-  bordero = {};
-
-  // a cada vez que eu clicar no valor final, um novo bordero é criado com novos valores
-
 
   mostraDiv() {
     if (this.mais === false) {
@@ -108,6 +94,29 @@ export class SellControlComponent implements OnInit {
       this.mais = false;
     }
   }
+
+  //preciso de um metodo e variavel que guarde todas as vendas do dia e some elas, estou falando de um objeto, e a cada iteracao criar um novo obj com todos os itens da venda
+  //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente
+
+  //friedman
+  // horas de trabalho 2
+  // total de vendas 3
+  // numero de transacao  4
+  // numero de itens 5
+  // oportunidades 6
+
+  // agora os calculos diario:
+
+  //venda media ( 3 /4 )
+  //itens por venda ( 5 /4 )
+  //vendas por hora (3 / 2 )
+  //taxa de conversao ( 4/6 * 100 )
+
+  // calculo semanal
+
+  bordero = {};
+
+  // a cada vez que eu clicar no valor final, um novo bordero é criado com novos valores
 
   ngOnInit(): void {}
 }

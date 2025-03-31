@@ -23,16 +23,27 @@ export class Usuario01Component implements OnInit {
 
   testedelista: number = 0 ; 
   addPreco: number[] = [];
+  preco: number = 0; 
 
-  adicionaLista(){
+
+  adicionaLista(
+
+  ){
     this.addPreco.push(this.testedelista)
     this.testedelista = 0 ; 
   }
 
+   
+
+  
+  
+
   ngOnInit(): void {
     
   }
-
-
-
 }
+
+ 
+
+
+
