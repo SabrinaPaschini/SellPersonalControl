@@ -97,36 +97,33 @@ export class SellControlComponent implements OnInit {
   }
 
   vendaMedia() {
-    if(this.total > 0){
+    if (this.total > 0) {
       return (this.total * this.transacoes) / this.item;
-    }else {
-      return 0
-    }
-   
-  }
-
-  vendasHora(){
-    if(this.total > 0 ){
-      return parseFloat((this.total / this.horasTrabalho).toFixed(2))
-    } return 0
-   
-  }
-
-  itensPorVenda(){
-    if(this.item > 0){
-      return this.item / this.transacoes
-    } return 0; 
-    
-  }
-
-  taxaConversao(){
-    if(this.total > 0 ){
-      return (this.transacoes/this.oportunidades)*100
     } else {
-      return 0 ; 
+      return 0;
     }
-   
-    
+  }
+
+  vendasHora() {
+    if (this.total > 0) {
+      return parseFloat((this.total / this.horasTrabalho).toFixed(2));
+    }
+    return 0;
+  }
+
+  itensPorVenda() {
+    if (this.item > 0) {
+      return this.item / this.transacoes;
+    }
+    return 0;
+  }
+
+  taxaConversao() {
+    if (this.total > 0) {
+      return (this.transacoes / this.oportunidades) * 100;
+    } else {
+      return 0;
+    }
   }
   //preciso de um metodo e variavel que guarde todas as vendas do dia e some elas, estou falando de um objeto, e a cada iteracao criar um novo obj com todos os itens da venda
   //é um metodo que vai guardar as variveis da venda e colocar na tabela, que é o proximo componente

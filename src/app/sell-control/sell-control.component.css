@@ -19,6 +19,7 @@
 }
 
 .boleta {
+  font-family: "Cormorant Garamond", serif;
   border: solid 2px #f0866936;
   width: auto;
   height: auto;
@@ -48,12 +49,13 @@ button {
 }
 
 .dias {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: solid 2px #f0866946;
   width: 200px;
-
   min-height: 400px;
   align-items: center;
   justify-content: center;
@@ -65,13 +67,16 @@ button {
 }
 
 .mes {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .inputItem {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   color: black;
   justify-content: center;
   align-items: center;
@@ -83,6 +88,7 @@ button {
 }
 
 .inputItem:hover {
+  
   background-color: rgba(160, 40, 40, 0.63);
 }
 
@@ -136,6 +142,7 @@ button {
 }
 
 #btnAddEnd {
+  font-family: "Cormorant Garamond", serif;
   width: 8rem;
   align-items: center;
   padding: 0.2rem;
@@ -155,6 +162,7 @@ h2 {
 }
 
 .parteFinalColeta {
+  font-family: "Cormorant Garamond", serif;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -166,6 +174,8 @@ h2 {
 }
 
 .parteFinalColeta input {
+  font-family: "Cormorant Garamond", serif;
+  font-size: large;
   text-align: center;
   margin-left: 1rem;
   padding: 1rem;
@@ -188,6 +198,10 @@ h2 {
 }
 
 .maisInfo, ul{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: larger;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -200,3 +214,8 @@ h2 {
   padding: 1rem;
  }
 
+
+ #total{
+  font-weight: bold;
+  font-size: larger;
+ }
