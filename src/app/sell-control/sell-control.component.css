@@ -182,6 +182,11 @@ h2 {
   padding: 1rem;
 }
 
+.inputItem:hover{
+  background-color: rgba(109, 19, 19, 0.747);
+  
+}
+
 .maisInfo, ul{
   display: flex;
   flex-direction: column;

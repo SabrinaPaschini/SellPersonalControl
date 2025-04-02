@@ -1,4 +1,3 @@
-
 <div>
   <h1>Controle Diário Pessoal</h1>
 
@@ -41,20 +40,12 @@
           [(ngModel)]="TodosPrecosTemp[i]"
         />
 
-        <button class="btnAdd" (click)="adicionarPreco()"> Valor final</button>
+        <button class="btnAdd" (click)="adicionarPreco()">Enviar</button>
       </div>
       <h1>Confirma total venda? R${{ detalheVenda() }}</h1>
     </div>
   </div>
 </div>
-
-<section class="parteFinalColeta">
-  <p>Atendimentos por dia:</p>
-  <input type="number" placeholder="Oportunidades" [(ngModel)]="oportunidades"/>
-  <p>Horas trabalhadas:</p>
-  <input type="number" placeholder="Horas trabalhadas"  [(ngModel)]="horasTrabalho" />
-  <button class="btnAddEnd" id="" >Finalizar dia</button>
-</section>
 
 <div class="filtro">
   <p>Pesquisa por dia:</p>
@@ -70,16 +61,34 @@
     <p>Soma dia: {{ total }}</p>
 
     <div class="maisInfo" *ngIf="mais">
-      <p>Horas de trabalho: {{horasTrabalho}}</p>
-      <p>Total de vendas: {{ total }}</p>
-      <p>Número de transações: {{transacoes}}</p>
-      <p>Número de itens: {{ item }}</p>
-      <p>Oportunidades {{oportunidades}}</p>
+      <p>Horas de trabalho: {{ horasTrabalho }} Hrs</p>
 
-      <p>Venda media:</p>
-      <p>Itens por venda:</p>
-      <p>Vendas por hora:</p>
-      <p>Taxa de conversão:</p>
+      <p>lista de vendas dia: {{ vendasDia() }}</p>
+
+      <p>Número de transações: {{ transacoes }}</p>
+      <p>Número de itens: {{ item }}</p>
+      <p>Oportunidades {{ oportunidades }}</p>
+
+      <p>Venda media: R$ {{ vendaMedia() }}</p>
+      <p>Itens por venda: {{ itensPorVenda() }}</p>
+      <p>Vendas por hora: R$ {{ vendasHora() }}</p>
+      <p>Taxa de conversão: {{ taxaConversao() }}%</p>
     </div>
   </div>
+
+  <section class="parteFinalColeta">
+    <p>Atendimentos por dia:</p>
+    <input
+      type="number"
+      placeholder="Oportunidades"
+      [(ngModel)]="oportunidades"
+    />
+    <p>Horas trabalhadas:</p>
+    <input
+      type="number"
+      placeholder="Horas trabalhadas"
+      [(ngModel)]="horasTrabalho"
+    />
+    <button class="btnAddEnd" id="">Finalizar dia</button>
+  </section>
 </div>
