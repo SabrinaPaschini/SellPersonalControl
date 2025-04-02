@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .all {
@@ -13,16 +18,13 @@
   border-radius: 1rem;
   text-transform: uppercase;
   font-family: serif;
-  background-image: url(https://as2.ftcdn.net/v2/jpg/04/70/79/81/1000_F_470798193_n3ZqMNaRJ9m7PEb5FEnoPqLJRlPvQZ7G.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 h1 {
   color: black;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 p {
@@ -89,7 +91,8 @@ p {
   text-align: center;
 }
 
-.footer, p {
+.footer,
+p {
   text-decoration: underline;
   cursor: pointer;
   justify-content: center;

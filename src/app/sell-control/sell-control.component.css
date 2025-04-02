@@ -2,8 +2,9 @@
 
 .all {
   font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: bolder;
   font-style: normal;
   font-size: 1rem;
   justify-content: center;
@@ -177,11 +178,14 @@ h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: large;
   text-align: center;
+  display: flex;
+  flex-direction: row;
   margin-left: 1rem;
   padding: 1rem;
   background-color: rgba(128, 128, 128, 0.178);
   border: none;
   margin-right: 1rem;
+  
 }
 
 .filtro input {
